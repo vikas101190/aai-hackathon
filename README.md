@@ -6,7 +6,7 @@ https://huggingface.co/Pi3141/alpaca-native-7B-ggml/blob/397e872bf4c83f4c642317a
 create an local env for requierments `pip install requirements.txt`
 
 after this we can run `python3 nomic_setup.py`
-`pyrhon3 basic_langchain_setup.py`
-`pyrhon3 custom_knowlage_query.py`
-`pyrhon3 basic_langchain_chatbot.py`
+`python3 basic_langchain_setup.py`
+`python3 custom_knowlage_query.py`
+`python3 basic_langchain_chatbot.py`
 
