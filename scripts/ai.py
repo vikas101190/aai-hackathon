@@ -5,7 +5,7 @@ import csv
 
 
 def readFromcsvFile():
-    with open('../dataset/initialData.csv', 'r') as file:
+    with open('../dataset/newData.csv', 'r') as file:
         # Create a CSV reader object
         reader = csv.reader(file)
         next(reader)
@@ -47,14 +47,15 @@ def unique_dataAndWriteToCSV():
     result = uniq_by(parse_to_list_of_objects, lambda item: item[0])
 
     # Specify the output CSV file path
-    output_file = '../dataset/cleanedDataUsingPython.csv'
+    output_file = '../dataset/newDataCleaned.csv'
 
     # Open the file in write mode
     with open(output_file, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow(["Product Name", "Current Inventory Level",	"Lead Time (in days)",	"Sales Velocity (in units per day)", "Highest Sales Months"
+        writer.writerow(["Product Name", "Current Inventory Level",	"Lead Time (in days)",	"Sales Velocity (in units per day)", "Highest Sales Month", "Supplier", "Unit Cost", "Reorder Point", "Safety Stock", "Festivals", "Supplier Lead Time (in days)", "Category", "Last Restock Date", "Next Restock Date"
                          ])
         writer.writerows(result)
 
 
+# print(readFromcsvFile())
 unique_dataAndWriteToCSV()
